@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?><!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dmh.mapper.SpecilMapper">
+
+    <resultMap id="myResultMap" type="specil">
+        <id property="sid" column="spilinfoid"/>
+        <result property="did" column="depinfoid"/>
+    </resultMap>
+
+    <select id="findSpecilSplit" parameterType="java.util.Map" resultType="myResultMap">
+        select * from specilinfo limit #{start},#{pageSize}
+    </select>
+
+</mapper>
