@@ -7,7 +7,7 @@
         <result property="did" column="depinfoid"/>
     </resultMap>
 
-    <select id="findSpecilSplit" parameterType="java.util.Map" resultType="myResultMap">
+    <select id="findSpecilSplit" parameterType="java.util.Map" resultType="specil">
         select * from specilinfo limit #{start},#{pageSize}
     </select>
 
